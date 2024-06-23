@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GizmoMax - GizmoHub</title>
+  <link href="output.css" rel="stylesheet">
+  <script src="./script.js" defer></script>
+</head>
+<body class="antialiased">
+  <!-- Header Section -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="text-2xl font-bold">GizmoHub</div>
+      <nav class="hidden md:flex space-x-4">
+        <a href="#home" class="text-gray-600 hover:text-gray-900">Home</a>
+        <a href="#product" class="text-gray-600 hover:text-gray-900">Product</a>
+        <a href="#reviews" class="text-gray-600 hover:text-gray-900">Reviews</a>
+        <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="menu" class="hidden md:hidden flex flex-col space-y-2 p-4">
+      <a href="#home" class="text-gray-600 hover:text-gray-900">Home</a>
+      <a href="#product" class="text-gray-600 hover:text-gray-900">Product</a>
+      <a href="#reviews" class="text-gray-600 hover:text-gray-900">Reviews</a>
+      <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-gray-100 py-20">
+    <div class="container mx-auto text-center">
+      <img src="./th.jpeg" alt="GizmoMax" class="mx-auto mb-8">
+      <h1 class="text-4xl font-bold mb-8">Meet GizmoMax - Your Ultimate Tech Gadget</h1>
+      <a href="#product" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Product Details Section -->
+  <section id="product" class="py-20">
+    <div class="container mx-auto text-center mb-10">
+      <h2 class="text-3xl font-bold mb-8">Why Choose GizmoMax?</h2>
+      <p class="mb-8">The GizmoMax is packed with features to make your life easier and more enjoyable.</p>
+      <div class="flex flex-wrap justify-center">
+        <img src="./OIP.jpeg" alt="GizmoMax" class="w-full md:w-1/2 lg:w-1/3 p-4">
+        <ul class="w-full md:w-1/2 lg:w-1/3 p-4 text-left list-disc">
+          <li>Double the number of Trusted Contacts from 10 to 202.</li>
+          <li>New watch face designs, including two new options that change with the seasons and the time of day.</li>
+          <li>New Bluetooth connection makes it easy to pair the watch with wireless earbuds or headphones.</li>
+          <li>Even more games, like Tic Tac Toe, Gizmo Says and Puzzle6.</li>
+        </ul>
+      </div>
+      <p class="text-2xl font-bold mb-4">$299.99</p>
+      <a href="#" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 ">Buy Now</a>
+    </div>
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Discover GizmoLite</h2>
+        <p class="mb-8">The GizmoLite offers essential features in a compact and affordable package.</p>
+        <div class="flex flex-wrap justify-center">
+          <img src="./OIP.jpeg" alt="GizmoMax" class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <ul class="w-full md:w-1/2 lg:w-1/3 p-4 text-left list-disc">
+            <li>Double the number of Trusted Contacts from 10 to 202.</li>
+            <li>New watch face designs, including two new options that change with the seasons and the time of day.</li>
+            <li>New Bluetooth connection makes it easy to pair the watch with wireless earbuds or headphones.</li>
+            <li>Even more games, like Tic Tac Toe, Gizmo Says and Puzzle6.</li>
+          </ul>
+        </div>
+        <p class="text-2xl font-bold mb-4">$299.99</p>
+        <a href="#" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700">Buy Now</a>
+      </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section id="reviews" class="bg-gray-100 py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">What Our Customers Say</h2>
+      <div class="flex flex-wrap justify-center">
+        <div class="w-full md:w-1/3 p-4">
+          <blockquote class="p-4 border-l-4 border-blue-600">
+            <p class="italic mb-4">"The GizmoMax is fantastic! It has changed my daily routine for the better."</p>
+            <cite>- John Doe</cite>
+          </blockquote>
+        </div>
+        <div class="w-full md:w-1/3 p-4">
+          <blockquote class="p-4 border-l-4 border-blue-600">
+            <p class="italic mb-4">"A must-have gadget for anyone looking to enhance their tech collection."</p>
+            <cite>- Jane Smith</cite>
+          </blockquote>
+        </div>
+        <div class="w-full md:w-1/3 p-4">
+          <blockquote class="p-4 border-l-4 border-blue-600">
+            <p class="italic mb-4">"Great value for the price. I highly recommend the GizmoMax."</p>
+            <cite>- Alice Johnson</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+      <form class="w-full md:w-1/2 mx-auto">
+        <div class="mb-4">
+          <input type="text" name="name" placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded-md">
+        </div>
+        <div class="mb-4">
+          <input type="email" name="email" placeholder="Your Email" class="w-full p-4 border border-gray-300 rounded-md">
+        </div>
+        <div class="mb-4">
+          <textarea name="message" placeholder="Your Message" class="w-full p-4 border border-gray-300 rounded-md"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 GizmoHub. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="#" class="text-gray-400 hover:text-gray-100 mx-2">Facebook</a>
+        <a href="#" class="text-gray-400 hover:text-gray-100 mx-2">Twitter</a>
+        <a href="#" class="text-gray-400 hover:text-gray-100 mx-2">Instagram</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
