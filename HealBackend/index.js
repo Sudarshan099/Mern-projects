@@ -25,10 +25,6 @@
 // //   console.log("server is running");
 // // });
 
-const express = require("express");
-const connectDB = require("./src/config/db");
-const app = express();
-const port = 3000;
 
 // app.get("/", (req, res) => {
 //   res.send("hello sudarshan");
@@ -53,8 +49,23 @@ const port = 3000;
 //   }
 // });
 
+
+
+const express = require("express");
+const connectDB = require("./src/config/db");
+const userProfileRoutes = require("./src/Routers/userProfileRoutes");
+require("dotenv").config();
+const app = express();
+const port = 5000;
+
+connectDB();
+app.use(express.json());
+
+app.use('/user',userProfileRoutes);
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-connectDB();
+
