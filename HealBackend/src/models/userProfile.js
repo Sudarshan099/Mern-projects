@@ -1,29 +1,19 @@
-const mongoose=require('mongoose');
+// models/profile.js
+const mongoose = require("mongoose");
 
-
-//destructure schema from mongoose
-const {Schema}=mongoose;
-
-//or
-// const schema=mongoose.Schema();
-
-const userProfileSchema=new Schema({
-    name:{
-        type: String,
-        required:true
-    },
-    email:{
-        type: String,
-        required:true
-    },
-    contact:{
-        type: Number,
-        required:false
-
-    },
-
-
+const profileSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  bio: {
+    type: String,
+    maxlength: 500,
+  },
+  profileImage: {
+    type: String, // Store the URL of the uploaded image
+  },
 });
 
-const UserProfile=mongoose.model('UserProfile', userProfileSchema);
-module.exports=UserProfile;
+module.exports = mongoose.model("Profile", profileSchema);
