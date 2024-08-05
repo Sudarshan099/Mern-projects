@@ -51,6 +51,7 @@ const connectDB = require("./src/config/db");
 const userProfileRoutes = require("./src/Routers/userProfileRoutes");
 const authRoutes = require("./src/Routers/authRoute");
 const profileRoutes = require("./src/Routers/ProfileRoutes");
+const categoryRoutes = require("./src/Routers/categoryRoute");
 const app = express();
 const port = 5000;
 connectDB();
@@ -58,6 +59,7 @@ app.use(express.json());
 
 app.use("/user", userProfileRoutes);
 app.use("/api/auth/", authRoutes);
+app.use("/api/", categoryRoutes);
 
 // Serve static files from the 'uploads' directory
 app.use("/uploads", express.static(__dirname + "/uploads"));

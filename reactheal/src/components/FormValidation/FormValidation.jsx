@@ -1,31 +1,35 @@
 import React, { useState } from "react";
 
 const FormValidation = () => {
-  const [formValues, setFormValues] = useState({ name: "", email: "" });
+  const [formValues, setFormValues] = useState({ name: "", email: "",});
+  // const[name,setName]=useState('')
+  // const[email,setEmail]=useState('')
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
+    // destructuring the event
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const validate = () => {
-    let tempErrors = {};
-    if (!formValues.name) tempErrors.name = "Name is required";
-    if (!formValues.email) {
-      tempErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formValues.email)) {
-      tempErrors.email = "Email is invalid";
-    }
-    setErrors(tempErrors);
-    return Object.keys(tempErrors).length === 0;
-  };
+    const validate = () => {
+      let tempErrors = {  };
+      if (!formValues.name) tempErrors.name = "Name is required";
+      if (!formValues.email) {
+        tempErrors.email = "Email is required";
+      } else if (!/\S+@\S+\.\S+/.test(formValues.email)) {
+        tempErrors.email = "Email is invalid";
+      }
+      setErrors(tempErrors);
+      return Object.keys(tempErrors).length === 0;
+    };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
+      console.log("Form submitted successfully");
       alert("Form submitted successfully");
-      setFormValues({name: "", email: ""})
+      //setFormValues({ name: "", email: "" });
       // handle form submission
     }
   };
@@ -36,7 +40,7 @@ const FormValidation = () => {
         <div>
           <label for="name" className="text-lg text-blue-950 font-bold">
             Name:
-          </label>{" "}
+          </label>
           <br />
           <input
             className="border-2 border-blue-950 p-2 rounded-lg"

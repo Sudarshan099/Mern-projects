@@ -14,6 +14,9 @@ import ShopComponent from "./components/Shop/shopComponent";
 import FunctionalProps from "./components/Functional_Props/FunctionalProps";
 import LifecycleComponent from "./components/react_lifecycle/lifecycleComponent";
 import ProductComponent from "./components/Product/ProductComponent";
+import ContactComponent from "./components/Contact/ContactComponent";
+import RegistrationForm from "./components/Register/RegisterComponent";
+import LoginComponent from "./components/Login/LoginComponen";
 
 class App extends Component {
   render() {
@@ -35,7 +38,10 @@ class App extends Component {
             <Route path="/" element={<HomeComponent />} />
             <Route path="/about" element={<AboutComponent />} />
             <Route path="/shop" element={<ShopComponent />} />
-            <Route path='/product' element={<ProductComponent/>}/>
+            <Route path="/product" element={<ProductComponent />} />
+            <Route path="/contact" element={<ContactComponent />} />
+            <Route path="/signup" element={<RegistrationForm />} />
+            <Route path="/login" element={<LoginComponent />} />
           </Routes>
         </div>
       </Router>
