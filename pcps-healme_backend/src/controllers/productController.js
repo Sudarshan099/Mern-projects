@@ -1,6 +1,6 @@
 const { productImage } = require("../middleware/uploadMiddleware");
 const Product = require("../models/productModel");
-const domain = "http://localhost:8000";
+const domain = "http://localhost:5000";
 
 // Helper function to send error responses
 const sendErrorResponse = (res, error) => {

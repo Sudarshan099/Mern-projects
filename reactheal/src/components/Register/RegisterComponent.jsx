@@ -16,12 +16,16 @@ const RegistrationForm = () => {
     confirmPassword: "",
   });
 
+  // console.log(userData);
+
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    // const name = e.target.name;
+    // const value = e.target.value;
     setUserData({
       ...userData,
       [name]: value,
@@ -30,7 +34,9 @@ const RegistrationForm = () => {
 
   const validate = () => {
     const errors = {};
-    if (!userData.username) errors.username = "Username is required";
+    if (!userData.username) {
+      errors.username = "Username is required";
+    }
     if (!userData.email) errors.email = "Email is required";
     if (!userData.password) errors.password = "Password is required";
     if (!userData.confirmPassword)
@@ -47,7 +53,7 @@ const RegistrationForm = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await axios.post(
+       const response=  await axios.post(
           "http://localhost:5000/api/auth/register",
           {
             name: userData.username,
@@ -56,14 +62,15 @@ const RegistrationForm = () => {
           }
         );
         console.log(response);
-        toast.success("Registration successful");
+        toast.success(response.data.msg);
 
         // navigate to login page
         setTimeout(() => {
           navigate("/login");
         }, 2000);
       } catch (error) {
-        console.error(error.response.data.msg);
+        // console.error(error.response);
+        // console.error(error.message);
         toast.error(error.response.data.msg);
       }
     }

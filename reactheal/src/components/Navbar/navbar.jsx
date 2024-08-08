@@ -12,10 +12,7 @@ function Navbar() {
             <div>
               {/* Logo */}
               <Link to="/" className="flex items-center py-4 px-2">
-                <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-2" />
-                <span className="font-semibold text-gray-500 text-lg">
-                  HealMe
-                </span>
+                <span className="font-bold text-gray-600 text-xl">HealMe</span>
               </Link>
             </div>
             {/* Primary Navbar items */}
@@ -49,6 +46,18 @@ function Navbar() {
                 className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
               >
                 Product
+              </Link>
+              <Link
+                to="/category"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              >
+                category
+              </Link>
+              <Link
+                to="/addproduct"
+                className="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300"
+              >
+                Add Product
               </Link>
             </div>
           </div>
@@ -131,6 +140,22 @@ function Navbar() {
                 className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
               >
                 Product
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/category"
+                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+              >
+                category
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/addproduct"
+                className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
+              >
+                Add Product
               </Link>
             </li>
             <li>

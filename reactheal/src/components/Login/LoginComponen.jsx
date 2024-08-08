@@ -5,12 +5,15 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom"
 
 const LoginComponent = () => {
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -41,12 +44,16 @@ const LoginComponent = () => {
           "http://localhost:5000/api/auth/login",
           loginData
         );
-        console.log(response);
+
+        // console.log(response.data);
         // set token in local storage
         localStorage.setItem("token", response.data.token);
+        // console.log(response.data.token);
 
         // show success message
         toast.success("Login successful");
+        setTimeout(() => navigate(`/`), 1000);
+
       } catch (error) {
         console.error(error.response.data.msg);
         toast.error(error.response.data.msg);
